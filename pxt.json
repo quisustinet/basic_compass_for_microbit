@@ -4,7 +4,8 @@
     "dependencies": {
         "core": "*",
         "radio": "*",
-        "microphone": "*"
+        "microphone": "*",
+        "basic_compass_for_microbit": "github:quisustinet/basic_compass_for_microbit#0c0a22fad719aed86bc89aa3692df88aaf09f360"
     },
     "files": [
         "main.blocks",

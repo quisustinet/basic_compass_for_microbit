@@ -1,22 +1,15 @@
-basic.show_icon(IconNames.HAPPY)
-
-def on_forever():
-    if input.compass_heading() > 358 or input.compass_heading() < 2:
-        basic.show_arrow(ArrowNames.NORTH)
-    elif input.compass_heading() > 43 and input.compass_heading() < 47:
-        basic.show_arrow(ArrowNames.NORTH_WEST)
-    elif input.compass_heading() > 88 and input.compass_heading() < 92:
-        basic.show_arrow(ArrowNames.WEST)
-    elif input.compass_heading() > 133 and input.compass_heading() < 137:
-        basic.show_arrow(ArrowNames.SOUTH_WEST)
-    elif input.compass_heading() > 178 and input.compass_heading() < 182:
-        basic.show_arrow(ArrowNames.SOUTH)
-    elif input.compass_heading() > 223 and input.compass_heading() < 227:
-        basic.show_arrow(ArrowNames.SOUTH_EAST)
-    elif input.compass_heading() > 268 and input.compass_heading() < 272:
-        basic.show_arrow(ArrowNames.EAST)
-    elif input.compass_heading() > 313 and input.compass_heading() < 317:
-        basic.show_arrow(ArrowNames.NORTH_EAST)
-    else:
-        basic.clear_screen()
-basic.forever(on_forever)
+basic.showIcon(IconNames.Happy)
+basic.showString("KOMPAS")
+basic.forever(function () {
+    if (input.compassHeading() > 357 || input.compassHeading() < 3) {
+        basic.showString("N")
+    } else if (input.compassHeading() > 87 && input.compassHeading() < 93) {
+        basic.showString("E")
+    } else if (input.compassHeading() > 177 && input.compassHeading() < 183) {
+        basic.showString("S")
+    } else if (input.compassHeading() > 267 && input.compassHeading() < 273) {
+        basic.showString("S")
+    } else {
+        basic.clearScreen()
+    }
+})
